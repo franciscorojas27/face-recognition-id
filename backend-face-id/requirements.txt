@@ -5,4 +5,5 @@ setuptools
 sqlmodel
 numpy
 python-multipart
+python-dotenv
 

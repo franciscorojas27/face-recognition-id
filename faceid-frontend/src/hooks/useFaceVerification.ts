@@ -28,7 +28,8 @@ export function useFaceVerification({ captureImage, setStatus, setVerifying, set
       const blob = new Blob([ab], { type: "image/jpeg" });
       const formData = new FormData();
       formData.append("file", blob, "face.jpg");
-      const res = await fetch("http://127.0.0.1:8000/verify", {
+      const apiUrl = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+      const res = await fetch(`${apiUrl}/verify`, {
         method: "POST",
         body: formData,
       });
