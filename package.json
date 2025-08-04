@@ -1,0 +1,16 @@
+{
+  "name": "face-recognition-id-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:frontend": "cd faceid-frontend && bun install",
+    "install:backend": "cd backend-face-id && pip install -r requirements.txt",
+    "install:all": "bun run install:frontend && bun run install:backend",
+    "dev:frontend": "cd faceid-frontend && bun run dev",
+    "dev:backend": "cd backend-face-id && uvicorn app.main:app --reload",
+    "dev": "concurrently \"bun run dev:frontend\" \"bun run dev:backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

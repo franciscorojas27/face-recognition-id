@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+face_recognition
+setuptools
+sqlmodel
+numpy
+python-multipart
+
